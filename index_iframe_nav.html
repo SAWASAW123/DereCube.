@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="sourse/files/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="sourse/files/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="sourse/files/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="sourse/files/favicon_io/site.webmanifest">
+
+
+    <link rel="stylesheet" href="sourse/styles/style.css">
+    <link rel="stylesheet" href="sourse/styles/blok.css">
+    <link rel="stylesheet" href="sourse/styles/castom.css">
+
+    <title>DereCube</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* Убираем общую прокрутку */
+            height: 100%;
+        }
+
+        #container {
+            display: flex;
+            height: 100%;
+                        margin: 0;
+            padding: 0;
+        }
+
+        /* 1. НАВИГАЦИОННАЯ ПАНЕЛЬ */
+        #navFrame {
+            width: 16.65%;
+            /* Ширина 17% */
+            height: 88%;
+            border: none;
+            display: block;
+                        margin: 0;
+            padding: 0;
+        }
+
+        /* 2. ОСНОВНОЙ КОНТЕНТ */
+        #mainFrame {
+            width: 83.35%;
+            /* Оставшееся пространство */
+            height: 88%;
+            border: none;
+            display: block;
+        }
+
+        /* 3. ПЛЕЕР */
+        #playerFrame {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /* На всю ширину экрана */
+            height: 12%;
+            border: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Контейнер для навигации и основного контента -->
+    <div id="container">
+        <!-- Навигационная панель слева -->
+        <iframe id="navFrame" src="nav.html" title="Навигация"
+    style="transform: scale(1); transform-origin: 0 0;"></iframe>
+        <!-- Основной контент сайта -->
+        <iframe id="mainFrame" name="mainFrame" src="content_main.html" title="Основной контент"></iframe>
+    </div>
+
+    <!-- Плеер, который всегда виден -->
+    <iframe id="playerFrame" src="player.html" title="Аудиоплеер"></iframe>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
